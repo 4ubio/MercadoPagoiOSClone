@@ -1,13 +1,13 @@
 //
-//  MainScreen.swift
+//  MainView.swift
 //  MercadoPagoClone
 //
-//  Created by Sebastián Rubio on 08/10/24.
+//  Created by Sebastián Rubio on 09/10/24.
 //
 
 import SwiftUI
 
-struct MainScreen: View {
+struct MainView: View {
     var body: some View {
         VStack {
             ScrollView {
@@ -43,11 +43,12 @@ struct MainScreen: View {
                             .foregroundStyle(Color.white)
                             .font(.system(size: 15))
                     }                        .padding(7)
-                        .background(Color.BG_2)
-                        .clipShape(.rect(cornerRadius: 10))
+                    .background(Color.BG_2)
+                    .clipShape(.rect(cornerRadius: 10))
+                    
                 }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .padding(.bottom, 8)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(.bottom, 8)
                 
                 //Box 1
                 VStack (spacing: 8) {
@@ -80,15 +81,13 @@ struct MainScreen: View {
                             .foregroundStyle(Color.white)
                             .font(.system(size: 15))
                     }
-                        .padding(10)
-                        .background(Color.green)
-                        .clipShape(.rect(cornerRadius: 10))
+                    .padding(10)
+                    .background(Color.green)
+                    .clipShape(.rect(cornerRadius: 10))
                     
                     Divider().padding(.vertical, 10)
     
-                    HStack (
-                        spacing: 20
-                    ) {
+                    HStack (spacing: 20) {
                         VStack {
                             Image(systemName: "creditcard")
                                 .font(.system(size: 20))
@@ -125,27 +124,28 @@ struct MainScreen: View {
                     
                     Card()
                 }
-                    .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.white)
-                    .clipShape(.rect(cornerRadius: 10))
-            }
                 .padding()
-                .padding(.top, 55)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.white)
+                .clipShape(.rect(cornerRadius: 10))
+                
+            }
+            .padding()
+            .padding(.top, 55)
+            
         }
-            .ignoresSafeArea()
-            .background(
-                LinearGradient(
+        .ignoresSafeArea()
+        .background(LinearGradient(
                     gradient: Gradient(
-                        colors: [Color.BG_1,
-                                 Color.white]),
+                    colors: [Color.BG_1, Color.white]),
                     startPoint: .top,
                     endPoint: .bottom
-                ))
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        ))
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+             
     }
 }
 
 #Preview {
-    MainScreen()
+    MainView()
 }

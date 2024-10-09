@@ -12,9 +12,7 @@ struct Card: View {
         HStack (spacing: 0) {
             ZStack {
                 HStack {
-                    VStack (
-                        alignment: .leading
-                    ) {
+                    VStack (alignment: .leading) {
                         Text("MER")
                             .font(.system(size: 50))
                             .foregroundStyle(Color.FONTCARD)
@@ -30,8 +28,8 @@ struct Card: View {
                     }
                     Spacer()
                 }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 150)
+                .frame(maxWidth: .infinity)
+                .frame(height: 150)
                 
                 VStack {
                     HStack {
@@ -45,9 +43,9 @@ struct Card: View {
                             .frame(height: 50)
                         Spacer()
                     }
-                        .padding(.leading, 10)
-                        .padding(.top, 15)
-                        .frame(maxWidth: .infinity)
+                    .padding(.leading, 10)
+                    .padding(.top, 15)
+                    .frame(maxWidth: .infinity)
                     
                     Spacer()
                                         
@@ -61,12 +59,13 @@ struct Card: View {
                             .foregroundStyle(Color.white)
                             .font(.system(size: 15))
                     }
-                        .padding(.horizontal, 10)
-                        .padding(.bottom, 15)
+                    .padding(.horizontal, 10)
+                    .padding(.bottom, 15)
+                    
                 }
             }
-                .background(Color.BGCARD_1)
-                .frame(maxWidth: .infinity)
+            .background(Color.BGCARD_1)
+            .frame(maxWidth: .infinity)
             
             VStack {
                 Image(systemName: "creditcard")
@@ -77,14 +76,15 @@ struct Card: View {
                 Text("Tarjeta \ndigital")
                     .foregroundStyle(.white)
             }
-                .padding(.horizontal, 35)
-                .padding(.vertical, 25)
-                .frame(height: 150)
-                .background(Color.BGCARD_2)
-        }
-            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 35)
+            .padding(.vertical, 25)
             .frame(height: 150)
-            .clipShape(.rect(cornerRadius: 10))
+            .background(Color.BGCARD_2)
+            
+        }
+        .frame(maxWidth: .infinity)
+        .frame(height: 150)
+        .clipShape(.rect(cornerRadius: 10))
     }
 }
 
