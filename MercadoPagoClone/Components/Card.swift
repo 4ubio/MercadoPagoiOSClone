@@ -43,14 +43,14 @@ struct Card: View {
                             .frame(height: 50)
                         Spacer()
                     }
-                    .padding(.leading, 10)
+                    .padding(.leading, 15)
                     .padding(.top, 15)
                     .frame(maxWidth: .infinity)
                     
                     Spacer()
                                         
                     HStack {
-                        Text("Ir a mi tarjeta")
+                        Text("Tarjeta Debit Mastercard")
                             .foregroundStyle(Color.white)
                             .font(.system(size: 20))
                             .bold()
@@ -59,28 +59,14 @@ struct Card: View {
                             .foregroundStyle(Color.white)
                             .font(.system(size: 15))
                     }
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 15)
                     .padding(.bottom, 15)
                     
                 }
             }
             .background(Color.BGCARD_1)
             .frame(maxWidth: .infinity)
-            
-            VStack {
-                Image(systemName: "creditcard")
-                    .font(.system(size: 20))
-                    .padding(15)
-                    .clipShape(.rect(cornerRadius: 50))
-                    .foregroundStyle(.white)
-                Text("Tarjeta \ndigital")
-                    .foregroundStyle(.white)
-            }
-            .padding(.horizontal, 35)
-            .padding(.vertical, 25)
-            .frame(height: 150)
-            .background(Color.BGCARD_2)
-            
+
         }
         .frame(maxWidth: .infinity)
         .frame(height: 150)
