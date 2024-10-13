@@ -20,7 +20,7 @@ struct NavBar: View {
                     .font(.system(size: 13))
             }
             .frame(maxWidth: .infinity)
-            VStack (spacing: 5) {
+            VStack (spacing: 10) {
                 Image(systemName: "creditcard")
                     .foregroundStyle(Color.gray)
                     .font(.system(size: 20))
@@ -50,10 +50,10 @@ struct NavBar: View {
                     .font(.system(size: 13))
             }
             .frame(maxWidth: .infinity)
-            VStack (spacing: 5) {
-                Image(systemName: "rectangle.stack")
+            VStack (spacing: 15) {
+                Image(systemName: "line.3.horizontal")
                     .foregroundStyle(Color.gray)
-                    .font(.system(size: 20))
+                    .font(.system(size: 25))
                 Text("Más")
                     .foregroundStyle(Color.gray)
                     .font(.system(size: 13))

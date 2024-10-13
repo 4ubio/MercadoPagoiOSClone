@@ -47,7 +47,6 @@ struct Header: View {
         .padding(.bottom, 10)
         .padding(.horizontal)
         .frame(maxWidth: .infinity)
-        .background(Color.BG_1)
     }
 }
 
