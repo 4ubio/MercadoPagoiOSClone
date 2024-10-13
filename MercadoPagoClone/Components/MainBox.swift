@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MainBox: View {
+    
+    @State var isShowing: Bool = true
+    
     var body: some View {
         VStack (spacing: 8) {
             HStack {
@@ -23,9 +26,18 @@ struct MainBox: View {
                 Text("$ 8,953")
                     .bold()
                     .font(.system(size: 35))
+                    .foregroundStyle(isShowing ? Color.black : Color.white)
                 Text("00")
                     .padding(.bottom, 15)
-                Image(systemName: "eye")
+                    .foregroundStyle(isShowing ? Color.black : Color.white)
+                Image(
+                    systemName: isShowing ? "eye" : "eyebrow"
+                    )
+                    .onTapGesture {
+                        withAnimation(.easeIn) {
+                            isShowing.toggle()
+                        }
+                    }
                     .padding(5)
                     .font(.system(size: 23))
                     .padding(5)
@@ -76,18 +88,28 @@ struct MainBox: View {
                     Text("Retirar")
                         .font(.system(size: 15))
                 }
-                VStack {
-                    Image(systemName: "person.text.rectangle")
-                        .font(.system(size: 25))
-                        .padding(15)
-                        .background(Color.LIGHTGRAY)
-                        .clipShape(Circle())
-                    Text("Tu CLABE")
-                        .font(.system(size: 15))
+                NavigationLink (
+                    destination: ActivityView()
+                ) {
+                    VStack {
+                        Image(systemName: "person.text.rectangle")
+                            .font(.system(size: 25))
+                            .padding(15)
+                            .background(Color.LIGHTGRAY)
+                            .clipShape(Circle())
+                            .foregroundStyle(Color.black)
+                        Text("Tu CLABE")
+                            .font(.system(size: 15))
+                            .foregroundStyle(Color.black)
+                    }
                 }
             }.padding(.bottom, 10)
             
-            Card()
+            NavigationLink (
+                destination: ActivityView()
+            ) {
+                Card()
+            }
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)

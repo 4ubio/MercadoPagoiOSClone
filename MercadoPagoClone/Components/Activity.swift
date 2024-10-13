@@ -18,17 +18,20 @@ struct Activity: View {
                     .bold()
                     .font(.system(size: 20))
                 Spacer()
-                Text("Ver todo")
-                    .bold()
-                    .font(.system(size: 17))
-                    .foregroundStyle(Color.BG_1)
-                Image(systemName: "greaterthan")
-                    .font(.system(size: 15))
-                    .foregroundStyle(Color.BG_1)
+                
+                NavigationLink (destination: ActivityView()) {
+                    Text("Ver todo")
+                        .bold()
+                        .font(.system(size: 17))
+                        .foregroundStyle(Color.BG_1)
+                    Image(systemName: "greaterthan")
+                        .font(.system(size: 15))
+                        .foregroundStyle(Color.BG_1)
+                }
             }
             
             ForEach(
-                operationViewModel,
+                operationViewModel.sorted(by: { $0.id > $1.id }).prefix(3),
                 id: \.self.id
             ) { operation in
                 ActivityCard(

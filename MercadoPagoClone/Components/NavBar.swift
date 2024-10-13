@@ -8,24 +8,35 @@
 import SwiftUI
 
 struct NavBar: View {
+    
+    var selected: String
+    
     var body: some View {
         //NavBar
         HStack {
             VStack (spacing: 5) {
                 Image(systemName: "house")
-                    .foregroundStyle(Color.BG_1)
+                    .foregroundStyle(
+                        selected == "Inicio" ? Color.BG_1 : Color.gray
+                    )
                     .font(.system(size: 20))
                 Text("Inicio")
-                    .foregroundStyle(Color.BG_1)
+                    .foregroundStyle(
+                        selected == "Inicio" ? Color.BG_1 : Color.gray
+                    )
                     .font(.system(size: 13))
             }
             .frame(maxWidth: .infinity)
             VStack (spacing: 10) {
                 Image(systemName: "creditcard")
-                    .foregroundStyle(Color.gray)
+                    .foregroundStyle(
+                        selected == "Actividad" ? Color.BG_1 : Color.gray
+                    )
                     .font(.system(size: 20))
                 Text("Actividad")
-                    .foregroundStyle(Color.gray)
+                    .foregroundStyle(
+                        selected == "Actividad" ? Color.BG_1 : Color.gray
+                    )
                     .font(.system(size: 13))
             }
             .frame(maxWidth: .infinity)
@@ -69,7 +80,7 @@ struct NavBar: View {
 }
 
 #Preview {
-    NavBar()
+    NavBar(selected: "Inicio")
 }
 
 struct EdgeBorder: Shape {
