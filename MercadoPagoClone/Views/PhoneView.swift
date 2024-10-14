@@ -12,6 +12,9 @@ struct PhoneView: View {
     var companies = ["Telcel", "Movistar", "AT&T", "Unefon", "Claro"]
     @State private var selectedCompany: String = "Telcel"
     
+    var types = ["$20", "$50", "$100", "$150", "$200"]
+    @State private var selectedType: String = "$150"
+    
     var cards = ["Citi Mastercard Crédito", "Scotiabank Visa Crédito"]
     @State private var selectedCard: String = "Citi Mastercard Crédito"
     
@@ -50,6 +53,26 @@ struct PhoneView: View {
             Picker("Companies", selection: $selectedCompany) {
                 ForEach(companies, id: \.self) { company in
                     Text(company)
+                }
+            }
+            .tint(Color.BG_1)
+            .padding(.vertical, 10)
+            .frame(maxWidth: .infinity)
+            .background(
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color.white)
+                    .stroke(Color.BG_1, lineWidth: 2)
+            )
+            .padding(.horizontal, 20)
+            
+            Text("Elige un tipo de recaga:")
+                .bold()
+                .font(.system(size: 15))
+                .padding(.horizontal, 20)
+            
+            Picker("Types", selection: $selectedType) {
+                ForEach(types, id: \.self) { type in
+                    Text(type)
                 }
             }
             .tint(Color.BG_1)
