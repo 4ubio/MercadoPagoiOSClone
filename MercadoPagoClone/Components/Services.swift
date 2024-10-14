@@ -11,18 +11,23 @@ struct Services: View {
     var body: some View {
         VStack (spacing: 20) {
             HStack {
-                VStack {
-                    Image(systemName: "iphone")
-                        .foregroundStyle(Color.BG_1)
-                        .font(.system(size: 35))
-                        .padding(15)
-                        .clipShape(Circle())
-                        .overlay(
-                            Circle().stroke(Color.gray, lineWidth: 0.3)
-                        )
-                    Text("Recargar \ncelular")
-                        .font(.system(size: 15))
-                        .lineLimit(2)
+                NavigationLink (
+                    destination: PhoneView()
+                ) {
+                    VStack {
+                        Image(systemName: "iphone")
+                            .foregroundStyle(Color.BG_1)
+                            .font(.system(size: 35))
+                            .padding(15)
+                            .clipShape(Circle())
+                            .overlay(
+                                Circle().stroke(Color.gray, lineWidth: 0.3)
+                            )
+                        Text("Recargar \ncelular")
+                            .font(.system(size: 15))
+                            .foregroundStyle(Color.black)
+                            .lineLimit(2)
+                    }
                 }
                 Spacer()
                 VStack {

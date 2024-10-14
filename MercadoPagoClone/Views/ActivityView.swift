@@ -24,12 +24,12 @@ struct ActivityView: View {
                         Text("Tu CLABE en Mercado Pago")
                             .bold()
                             .font(.system(size: 20))
-                        Text("072 180 001345678912 3")
+                        Text("524421897993523320")
                             .bold()
                             .font(.system(size: 15))
                     }
                     Spacer()
-                }.padding(.top, 20)
+                }.padding(.vertical, 20)
                 
                 ForEach(
                     operationViewModel.sorted(by: { $0.id > $1.id }),
@@ -44,9 +44,11 @@ struct ActivityView: View {
                         type: operation.type,
                         date: operation.date
                     )
-                }.padding(.top, 20)
-            }
-            .padding(.horizontal, 20)
+                }.padding(.top, 10)
+                
+                VStack{}.padding(15)
+                
+            }.padding(.horizontal, 20)
             
             //NavBar
             NavBar(selected: "Actividad")
