@@ -21,7 +21,7 @@ struct ActivityView: View {
                         .scaledToFit()
                         .frame(width: 50)
                     VStack (alignment: .leading, spacing: 5) {
-                        Text("Tu CLABE en Mercado Pago")
+                        Text("Tu CLABE")
                             .bold()
                             .font(.system(size: 20))
                         Text("524421897993523320")
@@ -29,7 +29,9 @@ struct ActivityView: View {
                             .font(.system(size: 15))
                     }
                     Spacer()
-                }.padding(.vertical, 20)
+                }.padding(.top, 20)
+                
+                Divider().frame(height: 0.5).overlay(Color.gray).padding(.vertical, 5)
                 
                 ForEach(
                     operationViewModel.sorted(by: { $0.id > $1.id }),

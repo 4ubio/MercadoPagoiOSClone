@@ -14,13 +14,13 @@ struct Offer: View {
     var desc: String
     
     var body: some View {
-        VStack (spacing: 15) {
-            HStack (spacing: 20) {
+        VStack (spacing: 10) {
+            HStack (spacing: 10) {
                 Image(systemName: icon)
                     .font(.system(size: 15))
                 Text(title)
                     .bold()
-                    .font(.system(size: 20))
+                    .font(.system(size: 15))
                 Spacer()
                 Image(systemName: "greaterthan")
                     .foregroundStyle(Color.BG_1)
@@ -28,7 +28,7 @@ struct Offer: View {
             }
             HStack {
                 Text(desc)
-                    .font(.system(size: 13))
+                    .font(.system(size: 12))
                 Spacer()
             }
         }

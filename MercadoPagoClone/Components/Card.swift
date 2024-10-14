@@ -14,36 +14,36 @@ struct Card: View {
                 HStack {
                     VStack (alignment: .leading) {
                         Text("MER")
-                            .font(.system(size: 50))
+                            .font(.system(size: 35))
                             .foregroundStyle(Color.FONTCARD)
                             .bold()
                         Text("CADO")
-                            .font(.system(size: 50))
+                            .font(.system(size: 35))
                             .foregroundStyle(Color.FONTCARD)
                             .bold()
                         Text("PAGO")
-                            .font(.system(size: 50))
+                            .font(.system(size: 35))
                             .foregroundStyle(Color.FONTCARD)
                             .bold()
                     }
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
-                .frame(height: 150)
+                .frame(height: 120)
                 
                 VStack {
                     HStack {
                         Image("mastercard")
                             .resizable()
                             .scaledToFit()
-                            .frame(height: 30)
+                            .frame(height: 20)
                         Image("mercado_pago")
                             .resizable()
                             .scaledToFit()
-                            .frame(height: 50)
+                            .frame(height: 35)
                         Spacer()
                     }
-                    .padding(.leading, 15)
+                    .padding(.leading, 10)
                     .padding(.top, 15)
                     .frame(maxWidth: .infinity)
                     
@@ -52,15 +52,15 @@ struct Card: View {
                     HStack {
                         Text("Tarjeta Debit Mastercard")
                             .foregroundStyle(Color.white)
-                            .font(.system(size: 20))
+                            .font(.system(size: 15))
                             .bold()
                         Spacer()
                         Image(systemName: "greaterthan")
                             .foregroundStyle(Color.white)
                             .font(.system(size: 15))
                     }
-                    .padding(.horizontal, 15)
-                    .padding(.bottom, 15)
+                    .padding(.horizontal, 10)
+                    .padding(.bottom, 20)
                     
                 }
             }
@@ -69,7 +69,7 @@ struct Card: View {
 
         }
         .frame(maxWidth: .infinity)
-        .frame(height: 150)
+        .frame(height: 100)
         .clipShape(.rect(cornerRadius: 10))
     }
 }

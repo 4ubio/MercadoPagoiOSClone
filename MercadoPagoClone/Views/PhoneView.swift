@@ -43,7 +43,7 @@ struct PhoneView: View {
             
             Text("Elige una compañía:")
                 .bold()
-                .font(.system(size: 17))
+                .font(.system(size: 15))
                 .padding(.top, 20)
                 .padding(.horizontal, 20)
             
@@ -58,13 +58,13 @@ struct PhoneView: View {
             .background(
                 RoundedRectangle(cornerRadius: 20)
                     .fill(Color.white)
-                    .stroke(Color.BG_1, lineWidth:2)
+                    .stroke(Color.BG_1, lineWidth: 2)
             )
             .padding(.horizontal, 20)
             
             Text("Número de celular (10 dígitos):")
                 .bold()
-                .font(.system(size: 17))
+                .font(.system(size: 15))
                 .padding(.horizontal, 20)
             
             TextField(
@@ -77,15 +77,16 @@ struct PhoneView: View {
                     .stroke(Color.BG_1, lineWidth:2)
             )
             .padding(.horizontal, 20)
+            .keyboardType(.numberPad)
             
             Text("Ejemplo: 8334279418")
-                .font(.system(size: 12))
+                .font(.system(size: 10))
                 .padding(.horizontal, 20)
                 .foregroundStyle(Color.gray)
             
             Text("Nombre del propietario:")
                 .bold()
-                .font(.system(size: 17))
+                .font(.system(size: 15))
                 .padding(.horizontal, 20)
             
             TextField(
@@ -101,7 +102,7 @@ struct PhoneView: View {
             
             Text("Elige una tarjeta:")
                 .bold()
-                .font(.system(size: 17))
+                .font(.system(size: 15))
                 .padding(.horizontal, 20)
             
             Picker("Cards", selection: $selectedCard) {
@@ -124,7 +125,7 @@ struct PhoneView: View {
             }) {
                 Text("Completar recarga")
                     .bold()
-                    .font(.system(size: 20))
+                    .font(.system(size: 15))
             }
             .padding(.vertical, 20)
             .frame(maxWidth: .infinity)
@@ -136,7 +137,10 @@ struct PhoneView: View {
             .padding(.horizontal, 20)
             
             .alert(isPresented: $showMessage) {
-                Alert(title: Text(title), message: Text(message))
+                Alert(
+                    title: Text(title),
+                    message: Text(message)
+                )
             }
                 
             Spacer()

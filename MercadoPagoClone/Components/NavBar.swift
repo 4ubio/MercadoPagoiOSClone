@@ -12,6 +12,7 @@ struct NavBar: View {
     var selected: String
     
     var body: some View {
+        
         //NavBar
         HStack {
             VStack (spacing: 5) {
@@ -20,59 +21,63 @@ struct NavBar: View {
                         selected == "Inicio" ? Color.BG_1 : Color.gray
                     )
                     .font(.system(size: 20))
+                    .frame(maxHeight: 25)
                 Text("Inicio")
                     .foregroundStyle(
                         selected == "Inicio" ? Color.BG_1 : Color.gray
                     )
-                    .font(.system(size: 13))
+                    .font(.system(size: 10))
             }
             .frame(maxWidth: .infinity)
-            VStack (spacing: 10) {
+            VStack (spacing: 5) {
                 Image(systemName: "creditcard")
                     .foregroundStyle(
                         selected == "Actividad" ? Color.BG_1 : Color.gray
                     )
                     .font(.system(size: 20))
+                    .frame(maxHeight: 25)
                 Text("Actividad")
                     .foregroundStyle(
                         selected == "Actividad" ? Color.BG_1 : Color.gray
                     )
-                    .font(.system(size: 13))
+                    .font(.system(size: 10))
             }
             .frame(maxWidth: .infinity)
             
             Image(systemName: "qrcode")
-                .padding(15)
+                .padding(10)
                 .foregroundStyle(Color.white)
-                .font(.system(size: 35))
+                .font(.system(size: 30))
                 .background(Color.BG_1)
                 .clipShape(Circle())
-                .padding(7)
+                .padding(5)
                 .background(Color.LIGHTBLUE)
                 .clipShape(Circle())
-                .offset(x: 0, y: -20)
+                .offset(x: 0, y: -12)
             
             VStack (spacing: 5) {
                 Image(systemName: "dollarsign")
                     .foregroundStyle(Color.gray)
                     .font(.system(size: 20))
+                    .frame(maxHeight: 25)
                 Text("Beneficios")
                     .foregroundStyle(Color.gray)
-                    .font(.system(size: 13))
+                    .font(.system(size: 10))
             }
             .frame(maxWidth: .infinity)
-            VStack (spacing: 15) {
+            VStack (spacing: 5) {
                 Image(systemName: "line.3.horizontal")
                     .foregroundStyle(Color.gray)
                     .font(.system(size: 25))
+                    .frame(maxHeight: 25)
                 Text("Más")
                     .foregroundStyle(Color.gray)
-                    .font(.system(size: 13))
+                    .font(.system(size: 10))
             }
             .frame(maxWidth: .infinity)
         }
         .padding(.horizontal, 10)
-        .padding(.bottom, 20)
+        .padding(.bottom, 30)
         .background(Color.white)
         .frame(maxWidth: .infinity)
         .border(width: 0.3, edges: [.top], color: .gray)

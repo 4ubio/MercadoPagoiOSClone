@@ -18,53 +18,41 @@ struct MainView: View {
                 ScrollView (showsIndicators: false) {
                     //Main Box
                     MainBox()
-                        .shadow(radius: 5, x: 0, y: 2)
                     
                     Offer(
                         icon: "dollarsign",
                         title: "Créditos",
                         desc: "Obtén hasta $ 18,484 con un Préstamo Personal."
-                    )
-                    .padding(.top, 15)
-                    .shadow(radius: 5, x: 0, y: 2)
+                    ).padding(.top, 15)
                     
                     //Services Box
-                    Services()
-                        .padding(.top, 15)
-                        .shadow(radius: 5, x: 0, y: 2)
+                    Services().padding(.top, 15)
                     
                     Offer(
                         icon: "dollarsign.bank.building.fill",
                         title: "Apartados",
                         desc: "Organiza tus finanzas y alcanza tus objetivos."
-                    )
-                    .padding(.top, 15)
-                    .shadow(radius: 5, x: 0, y: 2)
+                    ).padding(.top, 15)
                     
                     Offer(
                         icon: "bitcoinsign",
                         title: "Criptomonedas",
                         desc: "Compra Bitcoin, Ethereum y más a partir de $ 1."
-                    )
-                    .padding(.top, 15)
-                    .shadow(radius: 5, x: 0, y: 2)
+                    ).padding(.top, 15)
                     
                     //Tips
-                    Tips()
-                        .padding(.top, 15)
-                        .shadow(radius: 5, x: 0, y: 2)
+                    Tips().padding(.top, 15)
                     
                     //Activity
-                    Activity()
-                        .padding(.top, 15)
-                        .shadow(radius: 5, x: 0, y: 2)
+                    Activity().padding(.top, 15)
                     
                     //Disclaimer
                     Disclaimer()
                         .padding(.top, 15)
-                        .padding(.bottom, 40)
+                        .padding(.bottom, 30)
                     
                 }
+                .shadow(radius: 5, x: 0, y: 2)
                 .padding(.horizontal)
                 .frame(maxHeight: .infinity)
                 

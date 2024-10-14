@@ -12,17 +12,17 @@ struct Activity: View {
     @State var operationViewModel = OperationViewModel().getOperations()
     
     var body: some View {
-        VStack (spacing: 25) {
+        VStack (spacing: 15) {
             HStack (spacing: 15) {
                 Text("Tu última actividad")
                     .bold()
-                    .font(.system(size: 20))
+                    .font(.system(size: 15))
                 Spacer()
                 
                 NavigationLink (destination: ActivityView()) {
                     Text("Ver todo")
                         .bold()
-                        .font(.system(size: 17))
+                        .font(.system(size: 15))
                         .foregroundStyle(Color.BG_1)
                     Image(systemName: "greaterthan")
                         .font(.system(size: 15))

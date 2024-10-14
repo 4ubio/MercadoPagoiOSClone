@@ -12,23 +12,27 @@ struct MainBox: View {
     @State var isShowing: Bool = true
     
     var body: some View {
-        VStack (spacing: 8) {
+        VStack (spacing: 5) {
             HStack {
                 Text("En Mercado Pago")
                     .bold()
+                    .font(.system(size: 15))
                 Image(systemName: "info.circle")
+                    .font(.system(size: 15))
                 Spacer()
                 Image(systemName: "greaterthan")
                     .foregroundStyle(Color.BG_1)
+                    .font(.system(size: 15))
             }
             
             HStack {
                 Text("$ 8,953")
                     .bold()
-                    .font(.system(size: 35))
+                    .font(.system(size: 30))
                     .foregroundStyle(isShowing ? Color.black : Color.white)
                 Text("00")
-                    .padding(.bottom, 15)
+                    .padding(.bottom, 10)
+                    .font(.system(size: 15))
                     .foregroundStyle(isShowing ? Color.black : Color.white)
                 Image(
                     systemName: isShowing ? "eye" : "eyebrow"
@@ -39,7 +43,7 @@ struct MainBox: View {
                         }
                     }
                     .padding(5)
-                    .font(.system(size: 23))
+                    .font(.system(size: 20))
                     .padding(5)
                     .background(Color.LIGHTGRAY)
                     .clipShape(Circle())
@@ -49,6 +53,7 @@ struct MainBox: View {
             HStack {
                 Text("🔥 Activa tus ganancias del 15%")
                     .foregroundStyle(Color.white)
+                    .font(.system(size: 15))
                 Spacer()
                 Image(systemName: "greaterthan")
                     .foregroundStyle(Color.white)
@@ -68,8 +73,8 @@ struct MainBox: View {
                         .background(Color.LIGHTGRAY)
                         .clipShape(Circle())
                     Text("Ingresar")
-                        .font(.system(size: 15))
-                }
+                        .font(.system(size: 12))
+                }.frame(maxWidth: .infinity)
                 VStack {
                     Image(systemName: "creditcard")
                         .font(.system(size: 25))
@@ -77,8 +82,8 @@ struct MainBox: View {
                         .background(Color.LIGHTGRAY)
                         .clipShape(Circle())
                     Text("Transferir")
-                        .font(.system(size: 15))
-                }
+                        .font(.system(size: 12))
+                }.frame(maxWidth: .infinity)
                 VStack {
                     Image(systemName: "creditcard")
                         .font(.system(size: 25))
@@ -86,8 +91,8 @@ struct MainBox: View {
                         .background(Color.LIGHTGRAY)
                         .clipShape(Circle())
                     Text("Retirar")
-                        .font(.system(size: 15))
-                }
+                        .font(.system(size: 12))
+                }.frame(maxWidth: .infinity)
                 NavigationLink (
                     destination: ActivityView()
                 ) {
@@ -98,12 +103,14 @@ struct MainBox: View {
                             .background(Color.LIGHTGRAY)
                             .clipShape(Circle())
                             .foregroundStyle(Color.black)
-                        Text("Tu CLABE")
-                            .font(.system(size: 15))
+                        Text("CLABE")
+                            .font(.system(size: 12))
                             .foregroundStyle(Color.black)
-                    }
+                    }.frame(maxWidth: .infinity)
                 }
-            }.padding(.bottom, 10)
+            }
+            .padding(.bottom, 10)
+            .frame(maxWidth: .infinity)
             
             NavigationLink (
                 destination: ActivityView()

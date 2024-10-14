@@ -18,44 +18,44 @@ struct ActivityCard: View {
     var date: String
     
     var body: some View {
-        HStack (spacing: 20) {
+        HStack (spacing: 15) {
             Image(iconCorp)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 70)
+                .frame(width: 50)
                 .clipShape(Circle())
                 .overlay(
                     Circle().stroke(Color.gray, lineWidth: 0.5)
                 )
-            VStack (spacing: 7) {
+            VStack (spacing: 5) {
                 HStack {
                     Text(nameCorp)
                         .bold()
-                        .font(.system(size: 18))
+                        .font(.system(size: 15))
                     Spacer()
                     Text(total)
-                        .font(.system(size: 18))
+                        .font(.system(size: 15))
                 }
                 HStack {
                     Text(type)
-                        .font(.system(size: 15))
+                        .font(.system(size: 12))
                         .foregroundStyle(Color.gray)
                     Spacer()
                     Text(date)
-                        .font(.system(size: 15))
+                        .font(.system(size: 12))
                         .foregroundStyle(Color.gray)
                 }
                 HStack {
                     Image(iconCard)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 30)
+                        .frame(width: 15)
                         .clipShape(Circle())
                         .overlay(
                             Circle().stroke(Color.gray, lineWidth: 0.5)
                         )
                     Text(typeCard)
-                        .font(.system(size: 15))
+                        .font(.system(size: 12))
                         .foregroundStyle(Color.gray)
                     Spacer()
                 }
