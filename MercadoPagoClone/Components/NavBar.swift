@@ -30,7 +30,10 @@ struct NavBar: View {
             }
             .frame(maxWidth: .infinity)
             VStack (spacing: 5) {
-                Image(systemName: "creditcard")
+                Image("activity")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 25)
                     .foregroundStyle(
                         selected == "Actividad" ? Color.BG_1 : Color.gray
                     )
@@ -56,7 +59,10 @@ struct NavBar: View {
                 .offset(x: 0, y: -12)
             
             VStack (spacing: 5) {
-                Image(systemName: "dollarsign")
+                Image("beneficios")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 25)
                     .foregroundStyle(Color.gray)
                     .font(.system(size: 20))
                     .frame(maxHeight: 25)

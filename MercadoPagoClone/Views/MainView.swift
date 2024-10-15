@@ -20,7 +20,7 @@ struct MainView: View {
                     MainBox()
                     
                     Offer(
-                        icon: "dollarsign",
+                        icon: "creditos",
                         title: "Créditos",
                         desc: "Obtén hasta $ 18,484 con un Préstamo Personal."
                     ).padding(.top, 15)
@@ -29,13 +29,13 @@ struct MainView: View {
                     Services().padding(.top, 15)
                     
                     Offer(
-                        icon: "dollarsign.bank.building.fill",
+                        icon: "apartados",
                         title: "Apartados",
                         desc: "Organiza tus finanzas y alcanza tus objetivos."
                     ).padding(.top, 15)
                     
                     Offer(
-                        icon: "bitcoinsign",
+                        icon: "cripto",
                         title: "Criptomonedas",
                         desc: "Compra Bitcoin, Ethereum y más a partir de $ 1."
                     ).padding(.top, 15)

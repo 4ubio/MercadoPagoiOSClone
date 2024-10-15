@@ -35,16 +35,17 @@ struct MainBox: View {
                     .font(.system(size: 15))
                     .foregroundStyle(isShowing ? Color.black : Color.white)
                 Image(
-                    systemName: isShowing ? "eye" : "eyebrow"
+                    isShowing ? "eye" : "closedeye"
                     )
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 25)
                     .onTapGesture {
                         withAnimation(.easeIn) {
                             isShowing.toggle()
                         }
                     }
-                    .padding(5)
-                    .font(.system(size: 20))
-                    .padding(5)
+                    .padding(7)
                     .background(Color.LIGHTGRAY)
                     .clipShape(Circle())
                 Spacer()
@@ -67,27 +68,33 @@ struct MainBox: View {
 
             HStack (spacing: 20) {
                 VStack {
-                    Image(systemName: "creditcard")
-                        .font(.system(size: 25))
-                        .padding(15)
+                    Image("ingresar")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30)
+                        .padding(12)
                         .background(Color.LIGHTGRAY)
                         .clipShape(Circle())
                     Text("Ingresar")
                         .font(.system(size: 12))
                 }.frame(maxWidth: .infinity)
                 VStack {
-                    Image(systemName: "creditcard")
-                        .font(.system(size: 25))
-                        .padding(15)
+                    Image("transferir")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30)
+                        .padding(12)
                         .background(Color.LIGHTGRAY)
                         .clipShape(Circle())
                     Text("Transferir")
                         .font(.system(size: 12))
                 }.frame(maxWidth: .infinity)
                 VStack {
-                    Image(systemName: "creditcard")
-                        .font(.system(size: 25))
-                        .padding(15)
+                    Image("retirar")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30)
+                        .padding(12)
                         .background(Color.LIGHTGRAY)
                         .clipShape(Circle())
                     Text("Retirar")
@@ -97,9 +104,11 @@ struct MainBox: View {
                     destination: ActivityView()
                 ) {
                     VStack {
-                        Image(systemName: "person.text.rectangle")
-                            .font(.system(size: 25))
-                            .padding(15)
+                        Image("id")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30)
+                            .padding(12)
                             .background(Color.LIGHTGRAY)
                             .clipShape(Circle())
                             .foregroundStyle(Color.black)

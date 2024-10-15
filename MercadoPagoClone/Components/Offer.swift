@@ -16,8 +16,10 @@ struct Offer: View {
     var body: some View {
         VStack (spacing: 10) {
             HStack (spacing: 10) {
-                Image(systemName: icon)
-                    .font(.system(size: 15))
+                Image(icon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20)
                 Text(title)
                     .bold()
                     .font(.system(size: 15))
@@ -41,6 +43,6 @@ struct Offer: View {
 
 #Preview {
     Offer(
-        icon: "dollarsign", title: "Créditos", desc: "Obtén hasta $ 18,484 con un Préstamo Personal."
+        icon: "creditos", title: "Créditos", desc: "Obtén hasta $ 18,484 con un Préstamo Personal."
     )
 }

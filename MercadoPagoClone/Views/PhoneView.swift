@@ -47,7 +47,7 @@ struct PhoneView: View {
             Text("Elige una compañía:")
                 .bold()
                 .font(.system(size: 15))
-                .padding(.top, 20)
+                .padding(.top, 35)
                 .padding(.horizontal, 20)
             
             Picker("Companies", selection: $selectedCompany) {

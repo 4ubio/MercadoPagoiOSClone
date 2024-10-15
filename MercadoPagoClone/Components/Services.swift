@@ -15,10 +15,12 @@ struct Services: View {
                     destination: PhoneView()
                 ) {
                     VStack {
-                        Image(systemName: "iphone")
+                        Image("recarga")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30)
                             .foregroundStyle(Color.BG_1)
-                            .font(.system(size: 25))
-                            .padding(15)
+                            .padding(12)
                             .clipShape(Circle())
                             .overlay(
                                 Circle().stroke(Color.gray, lineWidth: 0.3)
@@ -31,10 +33,12 @@ struct Services: View {
                     }.frame(maxWidth: .infinity)
                 }
                 VStack {
-                    Image(systemName: "text.document")
+                    Image("servicios")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30)
                         .foregroundStyle(Color.BG_1)
-                        .font(.system(size: 25))
-                        .padding(15)
+                        .padding(12)
                         .clipShape(Circle())
                         .overlay(
                             Circle().stroke(Color.gray, lineWidth: 0.3)
@@ -45,10 +49,11 @@ struct Services: View {
                         .multilineTextAlignment(.center)
                 }.frame(maxWidth: .infinity)
                 VStack {
-                    Image(systemName: "car")
-                        .foregroundStyle(Color.BG_1)
-                        .font(.system(size: 25))
-                        .padding(15)
+                    Image("tag")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30)
+                        .padding(12)
                         .clipShape(Circle())
                         .overlay(
                             Circle().stroke(Color.gray, lineWidth: 0.3)
@@ -59,10 +64,11 @@ struct Services: View {
                         .multilineTextAlignment(.center)
                 }.frame(maxWidth: .infinity)
                 VStack {
-                    Image(systemName: "network")
-                        .foregroundStyle(Color.MAGENT)
-                        .font(.system(size: 25))
-                        .padding(15)
+                    Image("extranjero")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 35)
+                        .padding(10)
                         .clipShape(Circle())
                         .overlay(
                             Circle().stroke(Color.gray, lineWidth: 0.3)
@@ -76,10 +82,11 @@ struct Services: View {
             
             HStack (spacing: 15) {
                 VStack {
-                    Image(systemName: "person.text.rectangle")
-                        .foregroundStyle(Color.BG_1)
-                        .font(.system(size: 25))
-                        .padding(15)
+                    Image("transporte")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30)
+                        .padding(12)
                         .clipShape(Circle())
                         .overlay(
                             Circle().stroke(Color.gray, lineWidth: 0.3)
@@ -90,10 +97,12 @@ struct Services: View {
                         .multilineTextAlignment(.center)
                 }.frame(maxWidth: .infinity)
                 VStack {
-                    Image(systemName: "dollarsign.square")
-                        .foregroundStyle(Color.BG_1)
-                        .font(.system(size: 25))
-                        .padding(15)
+                    Image("cobrar")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30)
+                        .foregroundStyle(Color.NAVYBLUE)
+                        .padding(12)
                         .clipShape(Circle())
                         .overlay(
                             Circle().stroke(Color.gray, lineWidth: 0.3)
@@ -111,6 +120,17 @@ struct Services: View {
                         .clipShape(Circle())
                         .overlay(
                             Circle().stroke(Color.gray, lineWidth: 0.3)
+                        )
+                        .overlay(
+                            Text("GRATIS")
+                                .bold()
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 5)
+                                .background(Color.black)
+                                .foregroundStyle(Color.white)
+                                .font(.system(size: 8))
+                                .clipShape(.rect(cornerRadius: 30))
+                                .padding(.top, 40)
                         )
                     Text("Terminal \nBlue")
                         .font(.system(size: 10))
