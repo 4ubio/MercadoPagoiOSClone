@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F0E6E7172CBF7DF4007E1C6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0E6E7162CBF7DF4007E1C6C /* README.md */; };
+		F0E6E7192CBF8191007E1C6C /* mp.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E6E7182CBF8191007E1C6C /* mp.png */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F06FE5A62CB5DA5200E02515 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F06FE5952CB5DA5100E02515 /* MercadoPagoClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoPagoClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F06FE5A52CB5DA5200E02515 /* MercadoPagoCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoPagoCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F06FE5AF2CB5DA5200E02515 /* MercadoPagoCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoPagoCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F06FE5952CB5DA5100E02515 /* MercadoPagoClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MercadoPagoClone.app; path = "/Users/sebastianrubio/Desktop/MercadoPagoClone/build/Debug-iphoneos/MercadoPagoClone.app"; sourceTree = "<absolute>"; };
+		F06FE5A52CB5DA5200E02515 /* MercadoPagoCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MercadoPagoCloneTests.xctest; path = "/Users/sebastianrubio/Desktop/MercadoPagoClone/build/Debug-iphoneos/MercadoPagoClone.app/PlugIns/MercadoPagoCloneTests.xctest"; sourceTree = "<absolute>"; };
+		F06FE5AF2CB5DA5200E02515 /* MercadoPagoCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MercadoPagoCloneUITests.xctest; path = "/Users/sebastianrubio/Desktop/MercadoPagoClone/build/Debug-iphoneos/MercadoPagoCloneUITests-Runner.app/PlugIns/MercadoPagoCloneUITests.xctest"; sourceTree = "<absolute>"; };
+		F0E6E7162CBF7DF4007E1C6C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F0E6E7182CBF8191007E1C6C /* mp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mp.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,21 +82,12 @@
 		F06FE58C2CB5DA5100E02515 = {
 			isa = PBXGroup;
 			children = (
+				F0E6E7182CBF8191007E1C6C /* mp.png */,
+				F0E6E7162CBF7DF4007E1C6C /* README.md */,
 				F06FE5972CB5DA5100E02515 /* MercadoPagoClone */,
 				F06FE5A82CB5DA5200E02515 /* MercadoPagoCloneTests */,
 				F06FE5B22CB5DA5200E02515 /* MercadoPagoCloneUITests */,
-				F06FE5962CB5DA5100E02515 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		F06FE5962CB5DA5100E02515 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F06FE5952CB5DA5100E02515 /* MercadoPagoClone.app */,
-				F06FE5A52CB5DA5200E02515 /* MercadoPagoCloneTests.xctest */,
-				F06FE5AF2CB5DA5200E02515 /* MercadoPagoCloneUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +194,7 @@
 			mainGroup = F06FE58C2CB5DA5100E02515;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = F06FE5962CB5DA5100E02515 /* Products */;
+			productRefGroup = F06FE58C2CB5DA5100E02515;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -212,6 +210,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0E6E7172CBF7DF4007E1C6C /* README.md in Resources */,
+				F0E6E7192CBF8191007E1C6C /* mp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

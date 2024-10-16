@@ -37,7 +37,6 @@ struct NavBar: View {
                     .foregroundStyle(
                         selected == "Actividad" ? Color.BG_1 : Color.gray
                     )
-                    .font(.system(size: 20))
                     .frame(maxHeight: 25)
                 Text("Actividad")
                     .foregroundStyle(
@@ -64,7 +63,6 @@ struct NavBar: View {
                     .scaledToFit()
                     .frame(width: 25)
                     .foregroundStyle(Color.gray)
-                    .font(.system(size: 20))
                     .frame(maxHeight: 25)
                 Text("Beneficios")
                     .foregroundStyle(Color.gray)
